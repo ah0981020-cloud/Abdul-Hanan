@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdul Hanan | Creative Frontend Developer &amp; JavaScript Engineer</title>
+<meta name="description" content="Portfolio of Abdul Hanan, a frontend developer from Karachi building fast, accessible, responsive websites with HTML, CSS and vanilla JavaScript.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abdul Hanan | Creative Frontend Developer">
+<meta property="og:description" content="Fast, accessible, responsive websites built with HTML, CSS and vanilla JavaScript.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0d17'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='%2300e5ff' font-family='sans-serif' font-weight='700'%3EAH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="preloader" role="status" aria-live="polite">
+  <div class="pre-logo">AH</div>
+  <div class="pre-bar"><span id="preFill"></span></div>
+  <p id="prePct">0%</p>
+</div>
+<div id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="glow" aria-hidden="true"></div>
+
+<header class="nav-wrap">
+  <nav class="nav glass" aria-label="Primary">
+    <a href="#home" class="logo" aria-label="Abdul Hanan home">AH<span>.</span></a>
+    <ul id="menu" class="menu">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li><li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+    <button id="burger" class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="code-float" aria-hidden="true"><code style="--x:8%;--d:0s">const build = () =&gt; ship();</code><code style="--x:70%;--d:-4s">display: grid;</code><code style="--x:40%;--d:-8s">await fetch(api);</code><code style="--x:85%;--d:-12s">&lt;section&gt;</code></div>
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Hello, I'm Abdul Hanan 👋</p>
+      <h1>Creative <span class="grad">Frontend Developer</span> &amp; JavaScript Engineer</h1>
+      <p class="typing">I'm a <span id="typed"></span><i class="caret"></i></p>
+      <p class="lead">I build fast, accessible and beautifully responsive interfaces with clean HTML, modern CSS and vanilla JavaScript.</p>
+      <div class="cta"><a class="btn primary" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Let's Talk</a></div>
+      <div class="socials" aria-label="Social links"><a href="https://github.com/" aria-label="GitHub">GH</a><a href="https://linkedin.com/" aria-label="LinkedIn">in</a><a href="https://x.com/" aria-label="X">X</a></div>
+    </div>
+    <div class="orb-scene" aria-hidden="true"><div class="cube"><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="ring r1"></div><div class="ring r2"></div></div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div class="avatar glass reveal" role="img" aria-label="Profile photo placeholder for Abdul Hanan"><span>AH</span></div>
+    <div class="reveal">
+      <h2 class="title">About <span class="grad">Me</span></h2>
+      <p class="lead">I'm a web developer from Karachi, Pakistan, focused on responsive layouts, clean JavaScript and thoughtful UI. I enjoy turning designs into smooth, accessible experiences.</p>
+      <a class="btn primary" href="#" download>Download CV</a>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section alt">
+  <div class="container">
+    <h2 class="title reveal">My <span class="grad">Skills</span></h2>
+    <div class="filters" id="skillFilters" role="group" aria-label="Filter skills"></div>
+    <div class="grid skills" id="skillGrid"></div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="title reveal">Featured <span class="grad">Projects</span></h2>
+    <div class="toolbar">
+      <div class="filters" id="projFilters" role="group" aria-label="Filter projects"></div>
+      <label class="search"><span class="sr">Search projects</span><input id="search" type="search" placeholder="Search projects…"></label>
+    </div>
+    <div class="grid projects" id="projGrid"></div>
+    <p id="noRes" class="muted" hidden>No projects match your search.</p>
+  </div>
+</section>
+
+<section id="experience" class="section alt">
+  <div class="container"><h2 class="title reveal">Work <span class="grad">Experience</span></h2><ol class="timeline" id="timeline"></ol></div>
+</section>
+
+<section id="services" class="section">
+  <div class="container"><h2 class="title reveal">My <span class="grad">Services</span></h2><div class="grid services" id="serviceGrid"></div></div>
+</section>
+
+<section class="section alt" aria-label="Testimonials">
+  <div class="container">
+    <h2 class="title reveal">Client <span class="grad">Feedback</span></h2>
+    <div class="slider" id="slider" aria-roledescription="carousel"><div class="track" id="track"></div>
+      <div class="slider-ctl"><button class="icon-btn" id="prev" aria-label="Previous testimonial">←</button><button class="icon-btn" id="next" aria-label="Next testimonial">→</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <h2 class="title">Let's <span class="grad">Talk</span></h2>
+      <p class="lead">Have a project in mind? Send a message and I'll get back to you soon.</p>
+      <ul class="info"><li>✉ hello@example.com</li><li>📍 Karachi, Pakistan</li><li><a href="https://github.com/">GitHub</a> · <a href="https://linkedin.com/">LinkedIn</a></li></ul>
+    </div>
+    <form id="form" class="glass reveal" novalidate>
+      <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required><small class="err" id="e-name"></small></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><small class="err" id="e-email"></small></div>
+      <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" required><small class="err" id="e-subject"></small></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" maxlength="500" required></textarea><small class="count"><span id="count">0</span>/500</small><small class="err" id="e-message"></small></div>
+      <button class="btn primary" type="submit">Send Message</button>
+      <div id="success" class="success" hidden role="status"><svg viewBox="0 0 52 52" width="56" height="56"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 27l8 8 16-17" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><p>Message sent! Thank you.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><a href="#home" class="logo">AH<span>.</span></a><p class="muted">Building fast, accessible and elegant web experiences.</p></div>
+    <nav aria-label="Footer"><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+    <div class="socials"><a href="https://github.com/" aria-label="GitHub">GH</a><a href="https://linkedin.com/" aria-label="LinkedIn">in</a><a href="https://x.com/" aria-label="X">X</a></div>
+  </div>
+  <p class="copy">© <span id="year"></span> Abdul Hanan. All rights reserved.</p>
+</footer>
+<button id="toTop" class="icon-btn to-top" aria-label="Back to top">↑</button>
+
+<dialog id="modal" aria-labelledby="mTitle">
+  <button class="icon-btn close" id="mClose" aria-label="Close dialog">✕</button>
+  <div class="m-prev" id="mPrev"></div><h3 id="mTitle"></h3><p id="mDesc"></p><div class="tags" id="mTags"></div>
+  <div class="cta"><a class="btn primary" href="#" id="mLive">Live Demo</a><a class="btn ghost" href="#" id="mGit">GitHub</a></div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
